@@ -19,6 +19,9 @@ void Expected(bool condition, const char* message);
 class Logger
 {
 public:
+    Logger()
+        :   tick_(0)
+    {}
     template<typename TEvent>
     void Log(TEvent&& evt)
     {
